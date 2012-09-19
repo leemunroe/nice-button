@@ -1,0 +1,67 @@
+/* =============================================================================
+   Nice CSS3 Button. Nice?
+   Reusable CSS3 buttons for SASS
+   Author: Lee Munroe
+   Date: September 2012
+   Don't know what SASS is? You're missing out. See sass-lang.com
+   ========================================================================== */
+
+
+/* Define the color you want your button to be */
+$buttoncolor: #47a3dd;
+
+/* Style the button */   
+.button{
+	
+	/* Make it a button */
+	display:inline-block;
+	padding:.625em 1.25em;
+	margin:0 0 10px 0;
+	cursor:pointer;
+
+	/* Colors */
+	background-color:$buttoncolor;
+  background-image: -moz-linear-gradient(top, $buttoncolor, darken($buttoncolor,10%));
+  background-image: -webkit-linear-gradient(top, $buttoncolor, darken($buttoncolor,10%));
+  background-image: -ms-linear-gradient(top, $buttoncolor, darken($buttoncolor,10%));
+  background-image: linear-gradient(top, $buttoncolor, darken($buttoncolor,10%));
+	border:1px solid darken($buttoncolor,20%);
+	
+	/* Text */
+	color:#fff;
+	text-shadow:1px 1px 0 rgba(0,0,0,.2);
+	text-align:center;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 400;
+	font-size:1em;
+	
+	/* Rounded corners */
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-ms-border-radius:5px;
+	border-radius:5px;
+	
+	/* Shadows */
+  -webkit-box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 1px rgba(0,0,0,.2);
+  -moz-box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 1px rgba(0,0,0,.2);
+  -ms-box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 1px rgba(0,0,0,.2);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 1px 1px rgba(0,0,0,.2);
+  
+	&:hover,&:focus{
+	  background-image: -moz-linear-gradient(top, darken($buttoncolor,5%), darken($buttoncolor,15%));
+	  background-image: -webkit-linear-gradient(top, darken($buttoncolor,5%), darken($buttoncolor,15%));
+	  background-image: -ms-linear-gradient(top, darken($buttoncolor,5%), darken($buttoncolor,15%));
+	  background-image: linear-gradient(top, darken($buttoncolor,5%), darken($buttoncolor,15%));
+	}
+	
+	&:active{
+  	background:darken($buttoncolor,10%);
+	  -webkit-box-shadow:inset 0 1px 10px rgba(0,0,0,.2);
+	  -moz-box-shadow:inset 0 1px 10px rgba(0,0,0,.2);
+	  -ms-box-shadow:inset 0 1px 10px rgba(0,0,0,.2);
+	  box-shadow:inset 0 1px 10px rgba(0,0,0,.2);
+	  position:relative;
+	  top:1px;
+	}
+	
+}
